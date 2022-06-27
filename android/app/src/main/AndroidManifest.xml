@@ -4,7 +4,9 @@
         android:label="instagram_flutter"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
-        <activity
+
+       <activity
+            android:usesCleartextTraffic="true"
             android:name=".MainActivity"
             android:exported="true"
             android:launchMode="singleTop"
