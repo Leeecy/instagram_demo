@@ -127,7 +127,7 @@ class _SignupScreenState extends State<SignupScreen> {
               TextFieldInput(
                 hintText: 'Enter your username',
                 textInputType: TextInputType.text,
-                textEditingController: _usernameController,
+                textEditingController: _usernameController, img: 'mail.png',
               ),
               const SizedBox(
                 height: 24,
@@ -135,7 +135,7 @@ class _SignupScreenState extends State<SignupScreen> {
               TextFieldInput(
                 hintText: 'Enter your email',
                 textInputType: TextInputType.emailAddress,
-                textEditingController: _emailController,
+                textEditingController: _emailController, img: 'mail.png',
               ),
               const SizedBox(
                 height: 24,
@@ -144,7 +144,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 hintText: 'Enter your password',
                 textInputType: TextInputType.text,
                 textEditingController: _passwordController,
-                isPass: true,
+                isPass: true, img: 'pass.png',
               ),
               const SizedBox(
                 height: 24,
@@ -152,7 +152,7 @@ class _SignupScreenState extends State<SignupScreen> {
               TextFieldInput(
                 hintText: 'Enter your bio',
                 textInputType: TextInputType.text,
-                textEditingController: _bioController,
+                textEditingController: _bioController, img: 'pass.png',
               ),
 
               const SizedBox(

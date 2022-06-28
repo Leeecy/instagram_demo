@@ -5,12 +5,13 @@ class TextFieldInput extends StatelessWidget {
   final bool isPass;
   final String hintText;
   final TextInputType textInputType;
+  final String img;
   const TextFieldInput({
     Key? key,
     required this.textEditingController,
     this.isPass = false,
     required this.hintText,
-    required this.textInputType,
+    required this.textInputType, required this.img,
   }) : super(key: key);
 
   @override
@@ -22,6 +23,14 @@ class TextFieldInput extends StatelessWidget {
     return TextField(
       controller: textEditingController,
       decoration: InputDecoration(
+        // suffixIcon: IconButton(
+        //   icon: Icon(Icons.mail),
+        //   onPressed: () {},
+        // ),
+        prefixIcon: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Image.asset('assets/$img',width: 20,height: 20,),
+        ),
         hintText: hintText,
         border: inputBorder,
         focusedBorder: inputBorder,

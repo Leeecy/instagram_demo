@@ -60,7 +60,7 @@ class _LoginScreenState extends State<LoginScreen> {
           TextFieldInput(
             hintText: 'Enter your email',
             textInputType: TextInputType.emailAddress,
-            textEditingController: _emailController,
+            textEditingController: _emailController, img: 'mail.png',
           ),
           const SizedBox(
             height: 24,
@@ -69,7 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
             hintText: 'Enter your password',
             textInputType: TextInputType.text,
             textEditingController: _passwordController,
-            isPass: true,
+            isPass: true, img: 'pass.png',
           ),
           const SizedBox(
             height: 24,
@@ -105,32 +105,35 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Container(),
             flex: 2,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                child: const Text(
-                  'Dont have an account?',
-                ),
-                padding: const EdgeInsets.symmetric(vertical: 8),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => const SignupScreen(),
-                  ),
-                ),
-                child: Container(
+          Padding(
+            padding: const EdgeInsets.only(bottom: 28.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
                   child: const Text(
-                    ' Signup.',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
+                    'Dont have an account?',
                   ),
                   padding: const EdgeInsets.symmetric(vertical: 8),
                 ),
-              ),
-            ],
+                GestureDetector(
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const SignupScreen(),
+                    ),
+                  ),
+                  child: Container(
+                    child: const Text(
+                      ' Signup.',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    padding: const EdgeInsets.symmetric(vertical: 8),
+                  ),
+                ),
+              ],
+            ),
           ),
         ]),
       )),
